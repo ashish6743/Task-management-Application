@@ -41,7 +41,6 @@ function App() {
 
   const handleChange = (e) => {
     setTodo(e.target.value);
-    console.log(e.target.value)
   };
 
   const handleCheckbox = (e) => {
@@ -60,7 +59,7 @@ function App() {
   };
 
   const handleDelete = (id) => {
-    let val = confirm("Are u sure, You want to delete this Task");
+    let val = confirm("Are you sure, You wanna delete this Task");
     if (val) {
       setTodos(todos.filter(item => item.id !== id));
     }
