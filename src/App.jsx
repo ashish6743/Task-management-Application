@@ -70,8 +70,8 @@ function App() {
   };
 
   return (
-    <div className="bg-gray-600 w-full h-screen flex justify-center">
-      <div className="max-lg:w-10/10 lg:w-6/10 border-2 my-20 max-lg:mx-10 rounded-2xl p-3 bg-blue-200 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:w-0">
+    <div className="bg-sky-500 w-full h-screen flex justify-center">
+      <div className="max-md:w-10/10 md:w-6/10 border-2 my-20 max-lg:mx-10 rounded-2xl p-3 bg-sky-400 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:w-0">
 
         <h1 className="font-bold text-2xl text-center">
           iTask - Manage your todos
@@ -90,7 +90,7 @@ function App() {
           <button
             onClick={handleAdd}
             disabled={todo.length <= 1}
-            className="border-2 rounded-sm px-3 bg-blue-300 hover:bg-blue-500 disabled:opacity-50 cursor-pointer"
+            className="border-2 rounded-sm px-3 bg-sky-400 hover:bg-sky-500 disabled:opacity-50 cursor-pointer"
           >
             Save
           </button>
@@ -107,7 +107,7 @@ function App() {
               onChange={toggleFinished}
             />
             <span className="font-bold">
-              {showFinished ? "Show Completed" : "Show Pending"}
+              {showFinished ? "Show Pending" : "Show Completed"}
             </span>
           </div>
         </div>
@@ -125,7 +125,7 @@ function App() {
             .map(item => (
               <div
                 key={item.id}
-                className="flex justify-between items-center border-2 p-1 rounded-sm bg-cyan-200"
+                className="flex justify-between items-center border-2 p-1 rounded-sm bg-sky-500"
               >
                 <div className="flex gap-2 items-center">
                   <input
@@ -143,13 +143,13 @@ function App() {
                 <div className="flex gap-1">
                   <button
                     onClick={() => handleEdit(item.id)}
-                    className="border-2 rounded-sm px-2 py-1 bg-green-100 hover:bg-blue-400 cursor-pointer"
+                    className="border-2 rounded-sm px-2 py-1 bg-green-400 hover:bg-green-400 cursor-pointer"
                   >
                     <FaEdit />
                   </button>
                   <button
                     onClick={() => handleDelete(item.id)}
-                    className="border-2 rounded-sm px-2 py-1 bg-red-100 hover:bg-red-500 cursor-pointer"
+                    className="border-2 rounded-sm px-2 py-1 bg-red-500 hover:bg-red-500 cursor-pointer"
                   >
                     <MdDelete />
                   </button>
